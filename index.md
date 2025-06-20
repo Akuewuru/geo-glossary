@@ -1,25 +1,17 @@
 ---
 layout: default
-title: Glossary Index
+title: Geo Glossary
 ---
 
-# GeoLedger Glossary
+# Geo Glossary A–Z
 
-Click a term to view its definition.
-
-{% assign alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
-{% for letter in alpha %}
-## {{ letter }}
-
-{% assign terms_for_letter = site.terms | where_exp:"t","t.title | slice:0,1 | upcase == letter" | sort:"title" %}
-{% if terms_for_letter != empty %}
+{% if site.terms %}
 <ul>
-  {% for term in terms_for_letter %}
-  <li><a href="{{ term.url | relative_url }}">{{ term.title }}</a></li>
+  {% assign sorted_terms = site.terms | sort: 'title' %}
+  {% for term in sorted_terms %}
+    <li><a href="{{ term.url }}">{{ term.title }}</a></li>
   {% endfor %}
 </ul>
 {% else %}
-_No terms yet._
+<p>No glossary terms found yet. Please check back later.</p>
 {% endif %}
-
-{% endfor %}
