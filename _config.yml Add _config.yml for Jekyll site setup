@@ -1,5 +1,8 @@
 title: Geo Glossary
 description: A glossary of blockchain, Web3, and land-tokenization terms.
+baseurl: ""
+url: ""
+theme: minima
 
 collections:
   terms:
