@@ -1,8 +1,5 @@
-title: GeoLedger Glossary
-description: A simple Jekyll-powered glossary for blockchain, Web3, and land-tokenization terms.
-baseurl: ""
-url: ""
-theme: minima
+title: Geo Glossary
+description: A glossary of blockchain, Web3, and land-tokenization terms.
 
 collections:
   terms:
