@@ -23,4 +23,3 @@ _No terms yet._
 {% endif %}
 
 {% endfor %}
-Add index.md to show glossary on homepage
